@@ -152,19 +152,64 @@
 
         @media (max-width:768px){
 
-        .header{
-            flex-direction: column;
-            text-align: center;
-        }
+            body{
+                padding:20px;
+            }
 
-        .gallery{
-            grid-template-columns: repeat(2,1fr);
-        }
+            .header{
+                flex-direction:column;
+                align-items:center;
+                text-align:center;
+                gap:20px;
+                padding:20px;
+            }
 
-        .card{
-            width: 90%;
-        }
-    }
+            .img img{
+                width:140px;
+                height:140px;
+            }
+
+            .gallery,
+            .gallery1,
+            .gallery2,
+            .gallery3,
+            .gallery4{
+                grid-template-columns:repeat(2,1fr);
+                gap:10px;
+            }
+
+            .gallery img,
+            .gallery1 img,
+            .gallery2 img,
+            .gallery3 img,
+            .gallery4 img{
+                grid-column:span 1 !important;
+                grid-row:span 1 !important;
+            }
+
+            .hover-card{
+                width:100%;
+                max-width:300px;
+                margin:10px auto;
+                box-sizing:border-box;
+            }
+
+            h1{
+                font-size:22px;
+            }
+
+            h2{
+                font-size:20px;
+            }
+
+            p{
+                font-size:15px;
+            }
+
+            .footer{
+                padding:20px;
+            }
+                }
     </style>
 </head>
 
