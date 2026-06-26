@@ -45,29 +45,37 @@
             text-align: center;
             padding: 50px;
         }
-        .hover-text {
-            position: relative;
-            display: inline-block;
-        }
+
         .hover-card {
-            position: absolute;
-            top: 100%;
-            left: 0;
             width: 300px;
             background: #ffe8f0;
             padding: 20px;
             border-radius: 20px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            opacity: 0;
-            transform: translateY(10px);
             transition: all 0.3s ease;
-            pointer-events: none;
             z-index: 10;
             text-align: center;
         }
-        .hover-text:hover .hover-card {
-            opacity: 1;
-            transform: translate(0);
+        .hover-text {
+            margin-top: 10px;
+        }
+
+        .hover-text summary{
+            cursor: pointer;
+            font-weight: bold;
+            list-style: none;
+        }
+
+        .hover-text summary::-webkit-details-marker{
+            display: none;
+        }
+
+        details .hover-card{
+            display:none;
+        }
+
+        details[open] .hover-card{
+            display:block;
         }
 
         .gallery {
@@ -170,8 +178,8 @@
             <h1>114_vtsh_ding</h1>
             <p>114衛道高一丁</p>
             <a href="https://www.instagram.com/114_vtsh_ding/" target="_blank">Instagram</a><br>
-            <div class="hover-text">
-                <p>我想說..(點我看更多)</p>
+            <details class="hover-text">
+                <summary>我想說..(點我看更多)</summary>
                 <div class="hover-card">
                     <h1>給即將升高二的大家</h1>
                     <p>
@@ -184,7 +192,7 @@
                         就算分開後還是要保持聯絡唷~
                     </p>
                 </div>
-            </div>
+            </details>
         </div>
     </div>        
     <h2>2025.08.25-26探索營</h2>
